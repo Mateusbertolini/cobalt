@@ -217,7 +217,6 @@
       <li><a href="https://cobalto.ufpel.edu.br/dashboard"></a></li><li>Gestão Saúde</li>
       <li>Consultas</li>
       <li>Pacientes</li>
-      <li>Editar</li>
       <li>PACIENTE TESTE</li>
     </ul>
     <div style="clear: both;"></div></div><div style="clear: both;"></div>
@@ -236,8 +235,8 @@
 
 <!-- INÍCIO DIVISÃO EM TABS-->
 
-<div id="tab" class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all"><ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
-    
+<div id="tab" class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+  <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
     
     <li class="labeltab ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tab-0" aria-labelledby="ui-id-2" aria-selected="true"><a href="#tab-0" accesskey="tab-0" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Dados pessoais</a></li>
     
@@ -248,8 +247,7 @@
     <li class="labeltab ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-3" aria-labelledby="ui-id-4" aria-selected="false"><a href="#tab-3" accesskey="tab-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">Histórico odontológico</a></li>
     
     <li class="labeltab ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-4" aria-labelledby="ui-id-5" aria-selected="false"><a href="#tab-4" accesskey="tab-4" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5">Exames complementares</a></li>
-    
-    <li class="labeltab ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-5" aria-labelledby="ui-id-6" aria-selected="false"><a href="#tab-5" accesskey="tab-5" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">Frequência em consultas</a></li></ul>
+  </ul>
 
 
 <!--FIM DIVISÃO EM TABS-->
@@ -262,311 +260,309 @@
 
 <div id="tab-0" class="ui-widget tab tab-0 tab-0 ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" role="tabpanel" aria-expanded="true" aria-hidden="false">
 
-<br>
-<input type="hidden" name="txtPessoaId" id="txtPessoaId" value="165000">
+  <br>
+  <input type="hidden" name="txtPessoaId" id="txtPessoaId" value="165000">
 
-<br>
-<div id="brasileiro" style="">
-  <label name="lblCpf" id="lblCpf" style="width: 120px;">CPF</label>
-  <input type="text" name="txtCpf" id="txtCpf" value="01234567890" maxlength="" class="ui-state-default ui-corner-all mousetrap cpf" onblur="pesquisaPessoa()" style="width: 100px;" readonly="readonly">
+  <br>
+  <div id="brasileiro" style="">
+    <label name="lblCpf" id="lblCpf" style="width: 120px;">CPF</label>
+    <input type="text" name="txtCpf" id="txtCpf" value="01234567890" maxlength="" class="ui-state-default ui-corner-all mousetrap cpf" onblur="pesquisaPessoa()" style="width: 100px;" readonly="readonly">
 
-  <br></div>
+    <br></div>
 
-<label name="lblNome" id="lblNome" style="width: 120px;">Nome</label>
-<input type="text" name="txtNome" id="txtNome" value="PACIENTE TESTE" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
-<script>var txtNome = $('#txtNome');</script>
-<br>
-<label name="lblTipoDocumento" id="lblTipoDocumento" style="width: 120px;">Tipo de documento</label>
-<select class="mousetrap" style="width: 400px; display: none;" name="cmbTipoDocumento" id="cmbTipoDocumento" aria-disabled="false"><option value="">&nbsp;</option>
-<option value="13">Carteira de Identidade Profissional</option>
-<option value="14">Carteira Nacional de Habilitação</option>
-<option value="12" selected="selected">Cédula de Identidade</option>
-<option value="15">Cédula de Identidade de Estrangeiro</option>
-<option value="20">Certidão de Nascimento/Casamento</option>
-<option value="40">Cópia digitalizada da Carta de apresentação da Embaixada do Brasil</option>
-<option value="24">CPF</option>
-<option value="16">Outro</option>
-<option value="17">Passaporte</option>
-<option value="18">Registro Nacional de Estrangeiros</option>
-<option value="19">Registro Nacional Migratório</option>
+  <label name="lblNome" id="lblNome" style="width: 120px;">Nome</label>
+  <input type="text" name="txtNome" id="txtNome" value="PACIENTE TESTE" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
+  <script>var txtNome = $('#txtNome');</script>
+  <br>
+  <label name="lblTipoDocumento" id="lblTipoDocumento" style="width: 120px;">Tipo de documento</label>
+  <select class="mousetrap" style="width: 400px; display: none;" name="cmbTipoDocumento" id="cmbTipoDocumento" aria-disabled="false"><option value="">&nbsp;</option>
+  <option value="13">Carteira de Identidade Profissional</option>
+  <option value="14">Carteira Nacional de Habilitação</option>
+  <option value="12" selected="selected">Cédula de Identidade</option>
+  <option value="15">Cédula de Identidade de Estrangeiro</option>
+  <option value="20">Certidão de Nascimento/Casamento</option>
+  <option value="40">Cópia digitalizada da Carta de apresentação da Embaixada do Brasil</option>
+  <option value="24">CPF</option>
+  <option value="16">Outro</option>
+  <option value="17">Passaporte</option>
+  <option value="18">Registro Nacional de Estrangeiros</option>
+  <option value="19">Registro Nacional Migratório</option>
 
-</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="cmbTipoDocumento-button" role="button" href="#nogo" tabindex="0" aria-haspopup="true" aria-owns="cmbTipoDocumento-menu" style="width: 412px;" aria-disabled="false"><span class="ui-selectmenu-status">Cédula de Identidade</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span><script type="text/javascript">
-            var cmbTipoDocumento = 'cmbTipoDocumento';
-            $(document).ready(function(){
-                $('#cmbTipoDocumento').selectmenu({style:'dropdown'});
-            });
-        </script><br>
-<div id="estrangeiro" style="display: none">
-  <label name="lblEstrangeiro" id="lblEstrangeiro" style="width: 120px;">N°. Documento</label>
-  <input type="text" name="txtDocumentoEstrangeiro" id="txtDocumentoEstrangeiro" value="" maxlength="" class="ui-state-default ui-corner-all mousetrap estrangeiro" onblur="pesquisaPessoaDocumentoEstrangeiro()" style="width: 100px;">
-<script>var txtDocumentoEstrangeiro = $('#txtDocumentoEstrangeiro');</script>
+  </select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="cmbTipoDocumento-button" role="button" href="#nogo" tabindex="0" aria-haspopup="true" aria-owns="cmbTipoDocumento-menu" style="width: 412px;" aria-disabled="false"><span class="ui-selectmenu-status">Cédula de Identidade</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span><script type="text/javascript">
+              var cmbTipoDocumento = 'cmbTipoDocumento';
+              $(document).ready(function(){
+                  $('#cmbTipoDocumento').selectmenu({style:'dropdown'});
+              });
+          </script><br>
+  <div id="estrangeiro" style="display: none">
+    <label name="lblEstrangeiro" id="lblEstrangeiro" style="width: 120px;">N°. Documento</label>
+    <input type="text" name="txtDocumentoEstrangeiro" id="txtDocumentoEstrangeiro" value="" maxlength="" class="ui-state-default ui-corner-all mousetrap estrangeiro" onblur="pesquisaPessoaDocumentoEstrangeiro()" style="width: 100px;">
+  <script>var txtDocumentoEstrangeiro = $('#txtDocumentoEstrangeiro');</script>
 
-  <label name="lblOrgaoEmissor" id="lblOrgaoEmissor" style="width: 120px;">Orgão expedidor</label>
-  <input type="text" name="txtDocumentoEstrangeiroEmissor" id="txtDocumentoEstrangeiroEmissor" value="" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 160px;">
-<script>var txtDocumentoEstrangeiroEmissor = $('#txtDocumentoEstrangeiroEmissor');</script>
-  <br></div>
+    <label name="lblOrgaoEmissor" id="lblOrgaoEmissor" style="width: 120px;">Orgão expedidor</label>
+    <input type="text" name="txtDocumentoEstrangeiroEmissor" id="txtDocumentoEstrangeiroEmissor" value="" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 160px;">
+  <script>var txtDocumentoEstrangeiroEmissor = $('#txtDocumentoEstrangeiroEmissor');</script>
+    <br></div>
 
-<div id="brasileiroRG" style="">
-  <label name="lblRg" id="lblRg" style="width: 120px;">RG</label>
-  <input type="text" name="txtRg" id="txtRg" value="0123456789" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 100px;">
-
-
-  <label name="lblOrgaoEmissor" id="lblOrgaoEmissor" style="width: 120px;">Orgão expedidor</label>
-  <input type="text" name="txtPessoaRg" id="txtPessoaRg" value="Polícia Civil" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 90px;">
+  <div id="brasileiroRG" style="">
+    <label name="lblRg" id="lblRg" style="width: 120px;">RG</label>
+    <input type="text" name="txtRg" id="txtRg" value="0123456789" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 100px;">
 
 
-  <select class="mousetrap" style="width: 60px; display: none;" name="cmbOrgaoEmissorRgUnidadeFederativaId" id="cmbOrgaoEmissorRgUnidadeFederativaId" aria-disabled="false"><option value="">&nbsp;</option>
-<option value="1">AC</option>
-<option value="2">AL</option>
-<option value="3">AM</option>
-<option value="4">AP</option>
-<option value="5">BA</option>
-<option value="6">CE</option>
-<option value="7">DF</option>
-<option value="8">ES</option>
-<option value="9">GO</option>
-<option value="10">MA</option>
-<option value="11">MG</option>
-<option value="12">MS</option>
-<option value="13">MT</option>
-<option value="14">PA</option>
-<option value="15">PB</option>
-<option value="16">PE</option>
-<option value="17">PI</option>
-<option value="18">PR</option>
-<option value="19">RJ</option>
-<option value="20">RN</option>
-<option value="21">RO</option>
-<option value="22">RR</option>
-<option value="23"selected="selected">RS</option>
-<option value="24">SC</option>
-<option value="25">SE</option>
-<option value="26">SP</option>
-<option value="27">TO</option>
-</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="cmbOrgaoEmissorRgUnidadeFederativaId-button" role="button" href="#nogo" tabindex="0" aria-haspopup="true" aria-owns="cmbOrgaoEmissorRgUnidadeFederativaId-menu" style="width: 72px;" aria-disabled="false"><span class="ui-selectmenu-status">RS</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>  <br></div>
-
-<label name="lblDtEmissaoDocumento" id="lblDtEmissaoDocumento" style="width: 120px;">Dt. Emissão</label>
-<input type="text" name="txtDtEmissaoDocumento" id="txtDtEmissaoDocumento" value="01/01/2001" maxlength="10" class="ui-state-default ui-corner-all mousetrap  datepicker hasDatepicker" style=" width: 80px;"><img class="ui-datepicker-trigger" src="https://cobalto.ufpel.edu.br/static/_img/calendar.gif" alt="..." title="...">
-<script type="text/javascript">var txtDtEmissaoDocumento = $('#txtDtEmissaoDocumento');</script><br>
-<label name="lblDtNasc" id="lblDtNasc" style="width: 120px;">Dt. nascimento</label>
-<input type="text" name="txtPessoaDataNasc" id="txtPessoaDataNasc" value="01/01/2001" maxlength="10" class="ui-state-default ui-corner-all mousetrap  datepicker hasDatepicker" style=" width: 80px;"><img class="ui-datepicker-trigger" src="https://cobalto.ufpel.edu.br/static/_img/calendar.gif" alt="..." title="...">
-<script type="text/javascript">var txtPessoaDataNasc = $('#txtPessoaDataNasc');</script><br>
-<label name="lblEmail" id="lblEmail" style="width: 120px;">E-mail</label>
-<input type="text" name="txtEmail" id="txtEmail" value="email@teste.com" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
-<script>var txtEmail = $('#txtEmail');</script>
-<br>
-<label name="lblNacionalidade" id="lblNacionalidade" style="width: 120px;">Nacionalidade</label>
-<input type="text" name="txtNacionalidade" id="txtNacionalidade" value="brasileira" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
-<script>var txtNacionalidade = $('#txtNacionalidade');</script>
-<br>
-<label name="lblNaturalidade" id="lblNaturalidade" style="width: 120px;">Naturalidade</label>
-<div style="height: 22px; width: 25px; margin: 0px -1px 5px 0px; display: block; float: left; position: relative; padding: 0; text-decoration: none !important; text-align: center; zoom: 1; overflow: visible; border-right: none;" class="ui-widget ui-state-default ui-corner-tl ui-corner-bl ui-button-icon-only"><span class=" ui-icon ui-icon-search"></span></div><input type="text" value="Pelotas - RS" name="searchcmbNaturalidade" id="searchcmbNaturalidade" maxlength="255" class="ui-state-default ui-corner-tr ui-corner-br mousetrap  ui-autocomplete-input" style="width: 275px;" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-<input type="hidden" name="cmbNaturalidade" id="cmbNaturalidade" value="5343">
-<script>var cmbNaturalidade = $('#cmbNaturalidade');</script><script type="text/javascript">
-                var cmbNaturalidade = $('#cmbNaturalidade');
-                var searchcmbNaturalidade = $('#searchcmbNaturalidade');
-                $('#cmbNaturalidade').prop('url', 'https://cobalto.ufpel.edu.br//servicosgerais/cadastrosAuxiliares/cidade/buscaCidades/');
-                $(function() {
-                    $('#searchcmbNaturalidade').autocomplete({
-                        minLength: 3,
-                        source: function(request, response) {
-                            $('#cmbNaturalidade').val('');
-                            try{cmbNaturalidade_find(); } catch(err){}
-                            $.ajax({
-                                url: $('#cmbNaturalidade').prop('url'),
-                                dataType: 'json',
-                                data: {autocomplete: true, q: request.term},
-                                success: function( data ) {
-                                    if(data.combo.length>0){
-                                        response($.map(data.combo, function( item ) {
-                                            return {label: item.optionName, value: item.optionName, valueHidden: item.value}
-                                        }));
-                                    } else {
-                                        response({
-                                            label: 'Nenhum resultado encontrado!'
-                                        });
-                                    }
-                                }
-                            });
-                        },
-                        select: function(event, ui) {
-                            $('#cmbNaturalidade').val(ui.item.valueHidden);
-                            try{ cmbNaturalidade_callback(ui.item.valueHidden, ui.item.label); } catch(err){}
-                        }
-                    });
-                    $('#searchcmbNaturalidade').blur(function(){
-                        if($('#searchcmbNaturalidade').val() == ''){
-                            $('#cmbNaturalidade').val('');
-                        }
-                        if($('#cmbNaturalidade').val() == ''){
-                            $('#searchcmbNaturalidade').val('');
-                        }
-                        try{ cmbNaturalidade_blur(); } catch(err){}
-                    });
-                });
-            </script><br>
-<label name="lblEstadoCivil" id="lblEstadoCivil" style="width: 120px;">Estado Cívil</label>
-<select class="mousetrap" style="width: 100px; display: none;" name="cmbEstadoCivil" id="cmbEstadoCivil" aria-disabled="false"><option value="">&nbsp;</option>
-<option value="2">CASADO</option>
-<option value="4">DIVORCIADO</option>
-<option value="6">OUTROS</option>
-<option value="5">SEPARADO JUDICIALMENTE</option>
-<option value="1" selected="selected">SOLTEIRO</option>
-<option value="3">VIUVO</option>
-</select><span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span><script type="text/javascript">
-            var cmbEstadoCivil = 'cmbEstadoCivil';
-            $(document).ready(function(){
-                $('#cmbEstadoCivil').selectmenu({style:'dropdown'});
-            });
-        </script><br>
+    <label name="lblOrgaoEmissor" id="lblOrgaoEmissor" style="width: 120px;">Orgão expedidor</label>
+    <input type="text" name="txtPessoaRg" id="txtPessoaRg" value="Polícia Civil" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 90px;">
 
 
-<label name="lblSexo" id="lblSexo" style="width: 120px;">Sexo</label>
-<select class="mousetrap" style="width: 100px; display: none;" name="cmbSexo" id="cmbSexo" aria-disabled="false">
-<option value="M" selected="selected">Masculino</option>
-<option value="F">Feminino</option>
-</select><span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span><script type="text/javascript">
-            var cmbSexo = 'cmbSexo';
-            $(document).ready(function(){
-                $('#cmbSexo').selectmenu({style:'dropdown'});
-            });
-        </script><br>
+    <select class="mousetrap" style="width: 60px; display: none;" name="cmbOrgaoEmissorRgUnidadeFederativaId" id="cmbOrgaoEmissorRgUnidadeFederativaId" aria-disabled="false"><option value="">&nbsp;</option>
+  <option value="1">AC</option>
+  <option value="2">AL</option>
+  <option value="3">AM</option>
+  <option value="4">AP</option>
+  <option value="5">BA</option>
+  <option value="6">CE</option>
+  <option value="7">DF</option>
+  <option value="8">ES</option>
+  <option value="9">GO</option>
+  <option value="10">MA</option>
+  <option value="11">MG</option>
+  <option value="12">MS</option>
+  <option value="13">MT</option>
+  <option value="14">PA</option>
+  <option value="15">PB</option>
+  <option value="16">PE</option>
+  <option value="17">PI</option>
+  <option value="18">PR</option>
+  <option value="19">RJ</option>
+  <option value="20">RN</option>
+  <option value="21">RO</option>
+  <option value="22">RR</option>
+  <option value="23"selected="selected">RS</option>
+  <option value="24">SC</option>
+  <option value="25">SE</option>
+  <option value="26">SP</option>
+  <option value="27">TO</option>
+  </select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="cmbOrgaoEmissorRgUnidadeFederativaId-button" role="button" href="#nogo" tabindex="0" aria-haspopup="true" aria-owns="cmbOrgaoEmissorRgUnidadeFederativaId-menu" style="width: 72px;" aria-disabled="false"><span class="ui-selectmenu-status">RS</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>  <br></div>
 
-<hr class="ui-state-default"><label name="lblFiliacao" id="lblFiliacao" style="font-weight:bold;width: 120px;">Filiação</label>
-<br>
-<label name="lblNomeMae" id="lblNomeMae" style="width: 120px;">Nome da mãe</label>
-<input type="text" name="txtPessoaNomeMae" id="txtPessoaNomeMae" value="Mãe" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
-<script>var txtPessoaNomeMae = $('#txtPessoaNomeMae');</script>
-<br>
-<label name="lblNomePai" id="lblNomePai" style="width: 120px;">Nome do pai</label>
-<input type="text" name="txtPessoaNomePai" id="txtPessoaNomePai" value="Pai" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
-<script>var txtPessoaNomePai = $('#txtPessoaNomePai');</script>
-<br>
-<hr class="ui-state-default"><label name="lblCorRaca" id="lblCorRaca" style="font-weight:bold;width: 120px;">Cor/Raça</label>
-<br>
-<input type="radio" id="optCorAma" name="chkCor" value="3" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optCorAma = chkCor;</script><label name="lblCorAma" id="lblCorAma" style="width: 120px;">Amarela</label>
-<input type="radio" id="optCorBra" name="chkCor" value="1" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optCorBra = chkCor;</script><label name="lblCorBra" id="lblCorBra" style="width: 120px;">Branca</label>
-<input type="radio" id="optCorInd" name="chkCor" value="4" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optCorInd = chkCor;</script><label name="lblCorInd" id="lblCorInd" style="width: 120px;">Indígena</label>
-<input type="radio" id="optCorNeg" name="chkCor" value="2" class="mousetrap " checked="">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optCorNeg = chkCor;</script><label name="lblCorNeg" id="lblCorNeg" style="width: 120px;">Preta</label>
-<input type="radio" id="optCorPar" name="chkCor" value="5" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optCorPar = chkCor;</script><label name="lblCorPar" id="lblCorPar" style="width: 120px;">Parda</label>
-<input type="radio" id="optCorPar" name="chkCor" value="6" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optCorPar = chkCor;</script><label name="lblCorNot" id="lblCorNot" style="width: 125px;">Não quis declarar</label>
-
-<br>
-<hr class="ui-state-default"><label name="lblAlunoComNecissidadeEspecial" id="lblAlunoComNecissidadeEspecial" style="font-weight:bold;width: 800px;">Paciente com necessidade especial?</label>
-<br>
-<input type="radio" id="optDefSim" name="chkFlgNecessidadeEspecial" value="S" class="mousetrap ">
-<script type="text/javascript">var chkFlgNecessidadeEspecial = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkFlgNecessidadeEspecial]:checked").val();
-                    }
-                }
-            );
-            var optDefSim = chkFlgNecessidadeEspecial;</script><label name="lblDefVis" id="lblDefVis" style="width: 120px;">Sim</label>
-<input type="radio" id="optDefNao" name="chkFlgNecessidadeEspecial" value="N" class="mousetrap " checked="">
-<script type="text/javascript">var chkFlgNecessidadeEspecial = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkFlgNecessidadeEspecial]:checked").val();
-                    }
-                }
-            );
-            var optDefNao = chkFlgNecessidadeEspecial;</script><label name="lblDefNao" id="lblDefNao" style="width: 120px;">Não</label>
-<br>
+  <label name="lblDtEmissaoDocumento" id="lblDtEmissaoDocumento" style="width: 120px;">Dt. Emissão</label>
+  <input type="text" name="txtDtEmissaoDocumento" id="txtDtEmissaoDocumento" value="01/01/2001" maxlength="10" class="ui-state-default ui-corner-all mousetrap  datepicker hasDatepicker" style=" width: 80px;"><img class="ui-datepicker-trigger" src="https://cobalto.ufpel.edu.br/static/_img/calendar.gif" alt="..." title="...">
+  <script type="text/javascript">var txtDtEmissaoDocumento = $('#txtDtEmissaoDocumento');</script><br>
+  <label name="lblDtNasc" id="lblDtNasc" style="width: 120px;">Dt. nascimento</label>
+  <input type="text" name="txtPessoaDataNasc" id="txtPessoaDataNasc" value="01/01/2001" maxlength="10" class="ui-state-default ui-corner-all mousetrap  datepicker hasDatepicker" style=" width: 80px;"><img class="ui-datepicker-trigger" src="https://cobalto.ufpel.edu.br/static/_img/calendar.gif" alt="..." title="...">
+  <script type="text/javascript">var txtPessoaDataNasc = $('#txtPessoaDataNasc');</script><br>
+  <label name="lblEmail" id="lblEmail" style="width: 120px;">E-mail</label>
+  <input type="text" name="txtEmail" id="txtEmail" value="email@teste.com" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
+  <script>var txtEmail = $('#txtEmail');</script>
+  <br>
+  <label name="lblNacionalidade" id="lblNacionalidade" style="width: 120px;">Nacionalidade</label>
+  <input type="text" name="txtNacionalidade" id="txtNacionalidade" value="brasileira" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
+  <script>var txtNacionalidade = $('#txtNacionalidade');</script>
+  <br>
+  <label name="lblNaturalidade" id="lblNaturalidade" style="width: 120px;">Naturalidade</label>
+  <div style="height: 22px; width: 25px; margin: 0px -1px 5px 0px; display: block; float: left; position: relative; padding: 0; text-decoration: none !important; text-align: center; zoom: 1; overflow: visible; border-right: none;" class="ui-widget ui-state-default ui-corner-tl ui-corner-bl ui-button-icon-only"><span class=" ui-icon ui-icon-search"></span></div><input type="text" value="Pelotas - RS" name="searchcmbNaturalidade" id="searchcmbNaturalidade" maxlength="255" class="ui-state-default ui-corner-tr ui-corner-br mousetrap  ui-autocomplete-input" style="width: 275px;" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+  <input type="hidden" name="cmbNaturalidade" id="cmbNaturalidade" value="5343">
+  <script>var cmbNaturalidade = $('#cmbNaturalidade');</script><script type="text/javascript">
+                  var cmbNaturalidade = $('#cmbNaturalidade');
+                  var searchcmbNaturalidade = $('#searchcmbNaturalidade');
+                  $('#cmbNaturalidade').prop('url', 'https://cobalto.ufpel.edu.br//servicosgerais/cadastrosAuxiliares/cidade/buscaCidades/');
+                  $(function() {
+                      $('#searchcmbNaturalidade').autocomplete({
+                          minLength: 3,
+                          source: function(request, response) {
+                              $('#cmbNaturalidade').val('');
+                              try{cmbNaturalidade_find(); } catch(err){}
+                              $.ajax({
+                                  url: $('#cmbNaturalidade').prop('url'),
+                                  dataType: 'json',
+                                  data: {autocomplete: true, q: request.term},
+                                  success: function( data ) {
+                                      if(data.combo.length>0){
+                                          response($.map(data.combo, function( item ) {
+                                              return {label: item.optionName, value: item.optionName, valueHidden: item.value}
+                                          }));
+                                      } else {
+                                          response({
+                                              label: 'Nenhum resultado encontrado!'
+                                          });
+                                      }
+                                  }
+                              });
+                          },
+                          select: function(event, ui) {
+                              $('#cmbNaturalidade').val(ui.item.valueHidden);
+                              try{ cmbNaturalidade_callback(ui.item.valueHidden, ui.item.label); } catch(err){}
+                          }
+                      });
+                      $('#searchcmbNaturalidade').blur(function(){
+                          if($('#searchcmbNaturalidade').val() == ''){
+                              $('#cmbNaturalidade').val('');
+                          }
+                          if($('#cmbNaturalidade').val() == ''){
+                              $('#searchcmbNaturalidade').val('');
+                          }
+                          try{ cmbNaturalidade_blur(); } catch(err){}
+                      });
+                  });
+              </script><br>
+  <label name="lblEstadoCivil" id="lblEstadoCivil" style="width: 120px;">Estado Cívil</label>
+  <select class="mousetrap" style="width: 100px; display: none;" name="cmbEstadoCivil" id="cmbEstadoCivil" aria-disabled="false"><option value="">&nbsp;</option>
+  <option value="2">CASADO</option>
+  <option value="4">DIVORCIADO</option>
+  <option value="6">OUTROS</option>
+  <option value="5">SEPARADO JUDICIALMENTE</option>
+  <option value="1" selected="selected">SOLTEIRO</option>
+  <option value="3">VIUVO</option>
+  </select><span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span><script type="text/javascript">
+              var cmbEstadoCivil = 'cmbEstadoCivil';
+              $(document).ready(function(){
+                  $('#cmbEstadoCivil').selectmenu({style:'dropdown'});
+              });
+          </script><br>
 
 
+  <label name="lblSexo" id="lblSexo" style="width: 120px;">Sexo</label>
+  <select class="mousetrap" style="width: 100px; display: none;" name="cmbSexo" id="cmbSexo" aria-disabled="false">
+  <option value="M" selected="selected">Masculino</option>
+  <option value="F">Feminino</option>
+  </select><span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span><script type="text/javascript">
+              var cmbSexo = 'cmbSexo';
+              $(document).ready(function(){
+                  $('#cmbSexo').selectmenu({style:'dropdown'});
+              });
+          </script><br>
 
-<hr class="ui-state-default"><label name="lblPNE" id="lblPNE" style="font-weight:bold;width: 120px;">Condição sistêmica/Necessidade especial:</label>
-<br>
+  <hr class="ui-state-default"><label name="lblFiliacao" id="lblFiliacao" style="font-weight:bold;width: 120px;">Filiação</label>
+  <br>
+  <label name="lblNomeMae" id="lblNomeMae" style="width: 120px;">Nome da mãe</label>
+  <input type="text" name="txtPessoaNomeMae" id="txtPessoaNomeMae" value="Mãe" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
+  <script>var txtPessoaNomeMae = $('#txtPessoaNomeMae');</script>
+  <br>
+  <label name="lblNomePai" id="lblNomePai" style="width: 120px;">Nome do pai</label>
+  <input type="text" name="txtPessoaNomePai" id="txtPessoaNomePai" value="Pai" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 400px;">
+  <script>var txtPessoaNomePai = $('#txtPessoaNomePai');</script>
+  <br>
+  <hr class="ui-state-default"><label name="lblCorRaca" id="lblCorRaca" style="font-weight:bold;width: 120px;">Cor/Raça</label>
+  <br>
+  <input type="radio" id="optCorAma" name="chkCor" value="3" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optCorAma = chkCor;</script><label name="lblCorAma" id="lblCorAma" style="width: 120px;">Amarela</label>
+  <input type="radio" id="optCorBra" name="chkCor" value="1" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optCorBra = chkCor;</script><label name="lblCorBra" id="lblCorBra" style="width: 120px;">Branca</label>
+  <input type="radio" id="optCorInd" name="chkCor" value="4" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optCorInd = chkCor;</script><label name="lblCorInd" id="lblCorInd" style="width: 120px;">Indígena</label>
+  <input type="radio" id="optCorNeg" name="chkCor" value="2" class="mousetrap " checked="">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optCorNeg = chkCor;</script><label name="lblCorNeg" id="lblCorNeg" style="width: 120px;">Preta</label>
+  <input type="radio" id="optCorPar" name="chkCor" value="5" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optCorPar = chkCor;</script><label name="lblCorPar" id="lblCorPar" style="width: 120px;">Parda</label>
+  <input type="radio" id="optCorPar" name="chkCor" value="6" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optCorPar = chkCor;</script><label name="lblCorNot" id="lblCorNot" style="width: 125px;">Não quis declarar</label>
 
-<input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Hipertensão</label>
+  <br>
+  <hr class="ui-state-default"><label name="lblAlunoComNecissidadeEspecial" id="lblAlunoComNecissidadeEspecial" style="font-weight:bold;width: 800px;">Paciente com necessidade especial?</label>
+  <br>
+  <input type="radio" id="optDefSim" name="chkFlgNecessidadeEspecial" value="S" class="mousetrap ">
+  <script type="text/javascript">var chkFlgNecessidadeEspecial = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkFlgNecessidadeEspecial]:checked").val();
+                      }
+                  }
+              );
+              var optDefSim = chkFlgNecessidadeEspecial;</script><label name="lblDefVis" id="lblDefVis" style="width: 120px;">Sim</label>
+  <input type="radio" id="optDefNao" name="chkFlgNecessidadeEspecial" value="N" class="mousetrap " checked="">
+  <script type="text/javascript">var chkFlgNecessidadeEspecial = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkFlgNecessidadeEspecial]:checked").val();
+                      }
+                  }
+              );
+              var optDefNao = chkFlgNecessidadeEspecial;</script><label name="lblDefNao" id="lblDefNao" style="width: 120px;">Não</label>
+  <br>
 
-<input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Diabetes</label>
+
+
+  <hr class="ui-state-default"><label name="lblPNE" id="lblPNE" style="font-weight:bold;width: 120px;">Condição sistêmica/Necessidade especial:</label>
+  <br>
 
   <input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Hepatite B</label>
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Hipertensão</label>
 
-<input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Hepatite C</label>
+  <input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Diabetes</label>
 
-<input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
-<script type="text/javascript">var chkCor = $.extend($(":radio"), {
-                val:() => {
-                        return $("input[name= chkCor]:checked").val();
-                    }
-                }
-            );
-            var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Soropositivo</label>
+    <input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Hepatite B</label>
+
+  <input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Hepatite C</label>
+
+  <input type="checkbox" id="optPNE" name="chkPNE" value="3" class="mousetrap ">
+  <script type="text/javascript">var chkCor = $.extend($(":radio"), {
+                  val:() => {
+                          return $("input[name= chkCor]:checked").val();
+                      }
+                  }
+              );
+              var optPNE = chkPNE;</script><label name="lblCorPNE" id="lblCorPNE" style="width: 120px;">Soropositivo</label>
 </div>
 <!--FIM DA TAB DADOS PESSOAIS-->
-
-
 
 
 <br>    
@@ -662,74 +658,52 @@
 
 <!--FIM TAB ENDEREÇOS-->
 
-    
+
 <!-- INÍCIO TAB HISTÓRICO MÉDICO-->
 <div id="tab-2" class="ui-widget tab tab-2 tab-2 ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-3" role="tabpanel" aria-expanded="false" aria-hidden="true">
-  <input type="hidden" name="dt_aula" id="dt_aula" value="">
-    <label name="lblData" id="lblData" style="width: 120px;">Data</label>
-        <div style="float:left; margin-bottom:10px;">
-          <div id="datepicker" class="hasDatepicker"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="<Anterior"><span class="ui-icon ui-icon-circle-triangle-w">&lt;Anterior</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Próximo>"><span class="ui-icon ui-icon-circle-triangle-e">Próximo&gt;</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Junho</span>&nbsp;<span class="ui-datepicker-year">2023</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Domingo">Dom</span></th><th><span title="Segunda-feira">Seg</span></th><th><span title="Terça-feira">Ter</span></th><th><span title="Quarta-feira">Qua</span></th><th><span title="Quinta-feira">Qui</span></th><th><span title="Sexta-feira">Sex</span></th><th class="ui-datepicker-week-end"><span title="Sabado">Sab</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">1</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">2</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">3</a></td></tr><tr><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">4</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">5</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">6</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">7</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">8</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">9</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">10</a></td></tr><tr><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">11</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">12</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">13</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">14</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">15</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">16</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">17</a></td></tr><tr><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">18</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">19</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">20</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">21</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">22</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">23</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">24</a></td></tr><tr><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">25</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">26</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">27</a></td><td class=" ui-datepicker-days-cell-over undefined ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default ui-state-highlight ui-state-active" href="#">28</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">29</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">30</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table><div class="ui-datepicker-buttonpane ui-widget-content"><button type="button" class="ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all" data-handler="today" data-event="click">Hoje</button></div></div></div>         
-          </div>
-          
-            <br>            <label name="lblTopicoAbordado" id="lblTopicoAbordado" style="width: 120px;">Procedimento realizado:</label>
-            <textarea style="width: 750px;" name="topico_abordado" id="topico_abordado" rows="10" maxlength="1000000" class="ui-state-default ui-corner-all"></textarea>
-<script>var topico_abordado = $('#topico_abordado');</script>
-            <br>
+
+  <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"></a><span class="ui-jqgrid-title">Procedimentos realizados</span></div>
+
+  <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gridAtendMedico" dir="ltr" style="width: 1200px;">
+    <div class="ui-widget-overlay jqgrid-overlay"></div>
+    <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"></a><span class="ui-jqgrid-title"></span></div>
+    <div style="width: 1200px;" class="ui-state-default ui-jqgrid-hdiv">
+      <div class="ui-jqgrid-hbox"></div>
+    </div>
 
 
-
-            <label name="lblresponsavelA" id="lblresponsavelA" style="width: 120px;">Responsável técnico</label>
-              <select class="mousetrap" style="width: 100px; display: none;" name="cmbresponsavelA" id="cmbresponsavelA" aria-disabled="false"><option value="">&nbsp;</option>
-                <option value="2" selected="selected">Prof. A</option>
-                <option value="4">Prof. B</option>
-                <option value="6">STA. X</option>
-                <option value="5">STA. Y</option>
-                </select><span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span><script type="text/javascript">
-            var cmbresponsavelA = 'cmbresponsavelA';
-            $(document).ready(function(){
-                $('#cmbresponsavelA').selectmenu({style:'dropdown'});
-            });
-        </script><br>
-
-
-
-            <button name="btnNovoCronograma" onclick="novoCronograma()" id="btnNovoCronograma" value="Novo" class="button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Novo</span></button>
-            <button name="btnIncluirCronograma" onclick="incluirCronograma()" id="btnIncluirCronograma" value="Incluir" class="button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Incluir</span></button>
-            <br>
-
-              
-            <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_gridCronograma" dir="ltr" style="width: 706px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_gridCronograma"></div><div class="loading ui-state-default ui-state-active" id="load_gridCronograma" style="display: none;">Carregando...</div><div class="ui-jqgrid-view" id="gview_gridCronograma" style="width: 706px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title">Procedimentos realizados</span></div><div style="width: 706px;" class="ui-state-default ui-jqgrid-hdiv"><div class="ui-jqgrid-hbox">
-
-
-              <table class="ui-jqgrid-htable" style="width: 706px;" role="grid" aria-labelledby="gbox_gridCronograma" cellspacing="0" cellpadding="0" border="0">
-                <thead>
-                  <tr class="ui-jqgrid-labels" role="rowheader">
-                    <th id="gridCronograma_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="ID" style="width: 150px; display: none;">
-                    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                    <div id="jqgh_gridCronograma_id" class="ui-jqgrid-sortable">ID<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th>
-
-                    <th id="gridCronograma_dt_aula" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 70px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridCronograma_dt_aula" class="ui-jqgrid-sortable">Data<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th>
-
-                    <th id="gridCronograma_topico_abordado" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Tópico abordado" style="width: 250px;"><div id="jqgh_gridCronograma_topico_abordado" class="ui-jqgrid-sortable">Procedimento realizado<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></div></th>
-
-                    <th id="gridCronograma_dt_aula" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 70px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridCronograma_dt_aula" class="ui-jqgrid-sortable">Aluno<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th>
-
-                    <th id="gridCronograma_dt_aula" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 70px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridCronograma_dt_aula" class="ui-jqgrid-sortable">Responsável<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th>
-
-                    <div class="ui-jqgrid-bdiv" style="height: auto; width: 706px;"><div style="position:relative;"><div></div><table id="gridCronograma" tabindex="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_gridCronograma" class="ui-jqgrid-btable" style="width: 706px;" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height: 0px; width: 70px;"></td><td role="gridcell" style="height: 0px; width: 626px;"></td></tr><tr role="row" id="485985" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:right;display:none;" title="485985" aria-describedby="gridCronograma_id">485985</td><td role="gridcell" style="text-align:left;" title="12/06/2023" aria-describedby="gridCronograma_dt_aula">12/06/2023</td><td role="gridcell" style="text-align:left;" title="Prática UPD I- m1 parcial" aria-describedby="gridCronograma_topico_abordado">Primeira consulta, anamnese e solicitação de exames</td></tr><tr role="row" id="485987" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt"><td role="gridcell" style="text-align:right;display:none;" title="485987" aria-describedby="gridCronograma_id">485987</td><td role="gridcell" style="text-align:left;" title="13/06/2023" aria-describedby="gridCronograma_dt_aula">13/06/2023</td><td role="gridcell" style="text-align:left;" title="Prática UPD I- m2 parcial" aria-describedby="gridCronograma_topico_abordado">Pedido de exames complementares e avaliação clínica</td></tr><tr role="row" id="485988" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:right;display:none;" title="485988" aria-describedby="gridCronograma_id">485988</td><td role="gridcell" style="text-align:left;" title="14/06/2023" aria-describedby="gridCronograma_dt_aula">14/06/2023</td><td role="gridcell" style="text-align:left;" title="Teórica: Introdução à UPD I" aria-describedby="gridCronograma_topico_abordado">Encaminhamento para especialidade X</td></tr>
-
-          <div id="gridCronogramaPager" style="margin-bottom: 5px"></div>
-
-                  </tr>
-                  <tr></tr>
-                </thead></table></div>
-              </div>
-            </div>
-          </div>
-
-<br>
+  <table class="ui-jqgrid-htable" style="width: 1200px;" role="grid" aria-labelledby="gbox_gridHistoricoAluno" cellspacing="0" cellpadding="0" border="0">
+        <thead>
+      <tr class="ui-jqgrid-labels" role="rowheader">
+        <th id="gridHistoricoAluno_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="ID" style="width: 150px; display: none;" aria-selected="false">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+          <div id="jqgh_gridHistoricoAluno_id" class="ui-jqgrid-sortable">ID<span class="s-ico" style="display: none;"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr ui-state-disabled"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+        </th>
+        <th id="gridHistoricoAluno_cod_atividade" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 151px;">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_cod_atividade" class="ui-jqgrid-sortable">Data<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+        </th>
+        <th id="gridHistoricoAluno_disciplina" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Descrição do exame" style="width: 604px;" aria-selected="true">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_disciplina" class="ui-jqgrid-sortable">Descrição do exame<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+        </th>
+        <th id="gridHistoricoAluno_nota_conceito" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Aluno" style="width: 175px;">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_nota_conceito" class="ui-jqgrid-sortable">Aluno<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+        </th>
+        <th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Responsável" style="width: 175px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div class="ui-jqgrid-sortable">Responsável<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+        </th>
+      </tr>
+    </thead>
+        <thead>
+      <tr role="row" id="4333240" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt">
+        <td role="gridcell" style="text-align:center;display:none;" title="">&nbsp;</td>
+        <td role="gridcell" style="text-align:center;" title="05/06/2023">05/06/2023</td>
+        <td role="gridcell" style="text-align:left;" title="Avaliação endodôntica do dente 15">Consulta médica para avaliação de dor reportada na região do abdomen</td>
+        <td role="gridcell" style="text-align:center;" title="Aluno">Aluno X</td>
+        <td role="gridcell" style="text-align:left;" title="Responsável">Prof. Y</td>
+      </thead>
+  </table></div>
 </div>
 
+<br>
 <!-- FIM TAB HISTÓRICO MÉDICO-->    
 
 
@@ -737,8 +711,10 @@
 <!-- INÍCIO TAB HISTÓRICO ODONTOLÓGICO--> 
 <div id="tab-3" class="ui-widget tab tab-3 tab-3 ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-4" role="tabpanel" aria-expanded="false" aria-hidden="true">
   
+  <p></p>
+
   <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_gridCronograma" dir="ltr" style="width: 1200px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_gridCronograma"></div><div class="loading ui-state-default ui-state-active" id="load_gridCronograma" style="display: none;">Carregando...</div><div class="ui-jqgrid-view" id="gview_gridCronograma" style="width: 1200px;">
-    <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title">Odontograma</span></div><div style="width: 1200px" class="ui-state-default ui-jqgrid-hdiv"><div class="ui-jqgrid-hbox"></div>
+    <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"></a><span class="ui-jqgrid-title">Odontograma</span></div><div style="width: 1200px" class="ui-state-default ui-jqgrid-hdiv"><div class="ui-jqgrid-hbox"></div>
 
       <table class="ui-jqgrid-htable" style="width: 1200px;" role="grid" aria-labelledby="gbox_gridCronograma" cellspacing="0" cellpadding="0" border="0">
          <style>
@@ -1098,83 +1074,68 @@
   </table></div></div>
   <div id="gridCronogramaPager" style="margin-bottom: 5px"></div>
 
-  <br>
-  <div>
-  <br>
-  <button name="btnsalvar" onclick="salvar()" id="btnsalvar" value="Salvar/Atualizar" class="button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Salvar/Atualizar</span></button>
-  <br>
-  </div>
+<p></p>
 
-  <hr class="ui-state-default"><label name="registrar-atendimento" id="registrar-atendimento" style="width:180px; font-size: 16; font-weight: bold;">Registrar atendimento:</label>
+
+  <hr class="ui-state-default"><label name="registro-atendimento" id="registro-atendimento" style="width:350px; font-size: 16; font-weight: bold;">Registro de atendimentos:</label></hr>
   <br>
 
-    <input type="hidden" name="dt_aula" id="dt_aula" value="">
-    <label name="lblData" id="lblData" style="width: 120px;">Data</label>
-        <div style="float:left; margin-bottom:10px;">
-          <div id="datepicker" class="hasDatepicker"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="<Anterior"><span class="ui-icon ui-icon-circle-triangle-w">&lt;Anterior</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Próximo>"><span class="ui-icon ui-icon-circle-triangle-e">Próximo&gt;</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Junho</span>&nbsp;<span class="ui-datepicker-year">2023</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Domingo">Dom</span></th><th><span title="Segunda-feira">Seg</span></th><th><span title="Terça-feira">Ter</span></th><th><span title="Quarta-feira">Qua</span></th><th><span title="Quinta-feira">Qui</span></th><th><span title="Sexta-feira">Sex</span></th><th class="ui-datepicker-week-end"><span title="Sabado">Sab</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">1</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">2</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">3</a></td></tr><tr><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">4</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">5</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">6</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">7</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">8</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">9</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">10</a></td></tr><tr><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">11</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">12</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">13</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">14</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">15</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">16</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">17</a></td></tr><tr><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">18</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">19</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">20</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">21</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">22</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">23</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">24</a></td></tr><tr><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">25</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">26</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">27</a></td><td class=" ui-datepicker-days-cell-over undefined ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default ui-state-highlight ui-state-active" href="#">28</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">29</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#">30</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table><div class="ui-datepicker-buttonpane ui-widget-content"><button type="button" class="ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all" data-handler="today" data-event="click">Hoje</button></div></div></div>         
-          </div>
-          
-            <br>
+    <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"></a><span class="ui-jqgrid-title">Procedimentos realizados</span></div>
 
-            <hr class="ui-state-default"><label name="registrar-atendimento" id="registrar-atendimento" style="width:150px; font-size: 16; font-weight: bold;">Descrição do procedimento realizado:</label>
-
-            <textarea style="width: 750px;" name="topico_abordado" id="topico_abordado" rows="10" maxlength="1000000" class="ui-state-default ui-corner-all"></textarea>
-              <script>var topico_abordado = $('#topico_abordado');</script>
-          <br>
-              <label name="lblresponsavel" id="lblresponsavel" style="width: 120px;">Responsável técnico</label>
-                <select class="mousetrap" style="width: 100px; display: none;" name="cmbresponsavel" id="cmbresponsavel" aria-disabled="false"><option value="">&nbsp;</option>
-                  <option value="2">Prof. A</option>
-                  <option value="4" selected="selected">Prof. B</option>
-                  <option value="6">STA. X</option>
-                  <option value="5">STA. Y</option>
-                </select><span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span><script type="text/javascript">
-            var cmbresponsavel = 'cmbresponsavel';
-            $(document).ready(function(){
-                $('#cmbresponsavel').selectmenu({style:'dropdown'});
-            });
-        </script><br>
+  <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gridAtendMedico" dir="ltr" style="width: 1200px;">
+    <div class="ui-widget-overlay jqgrid-overlay"></div>
+    <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"></a><span class="ui-jqgrid-title"></span></div>
+    <div style="width: 1200px;" class="ui-state-default ui-jqgrid-hdiv">
+      <div class="ui-jqgrid-hbox"></div>
+    </div>
 
 
-
-
-
-
-
-
-            <br>
-            <button name="btnNovoCronograma" onclick="novoCronograma()" id="btnNovoCronograma" value="Novo" class="button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Novo</span></button>
-            <button name="btnIncluirCronograma" onclick="incluirCronograma()" id="btnIncluirCronograma" value="Incluir" class="button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Incluir</span></button>
-            <br>
-
-              
-            <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_gridCronograma" dir="ltr" style="width: 706px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_gridCronograma"></div><div class="loading ui-state-default ui-state-active" id="load_gridCronograma" style="display: none;">Carregando...</div><div class="ui-jqgrid-view" id="gview_gridCronograma" style="width: 706px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title">Procedimentos realizados</span></div><div style="width: 706px;" class="ui-state-default ui-jqgrid-hdiv"><div class="ui-jqgrid-hbox">
-
-
-              <table class="ui-jqgrid-htable" style="width: 706px;" role="grid" aria-labelledby="gbox_gridCronograma" cellspacing="0" cellpadding="0" border="0">
-                <thead>
-                  <tr class="ui-jqgrid-labels" role="rowheader">
-                    <th id="gridCronograma_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="ID" style="width: 150px; display: none;">
-                    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                    <div id="jqgh_gridCronograma_id" class="ui-jqgrid-sortable">ID<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th>
-
-                    <th id="gridCronograma_dt_aula" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 70px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridCronograma_dt_aula" class="ui-jqgrid-sortable">Data<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th>
-
-                    <th id="gridCronograma_topico_abordado" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Tópico abordado" style="width: 250px;"><div id="jqgh_gridCronograma_topico_abordado" class="ui-jqgrid-sortable">Procedimento realizado<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></div></th>
-
-                    <th id="gridCronograma_dt_aula" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 70px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridCronograma_dt_aula" class="ui-jqgrid-sortable">Aluno<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th>
-
-                    <th id="gridCronograma_dt_aula" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 70px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridCronograma_dt_aula" class="ui-jqgrid-sortable">Responsável<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th>
-
-                    <div class="ui-jqgrid-bdiv" style="height: auto; width: 706px;"><div style="position:relative;"><div></div><table id="gridCronograma" tabindex="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_gridCronograma" class="ui-jqgrid-btable" style="width: 706px;" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height: 0px; width: 70px;"></td><td role="gridcell" style="height: 0px; width: 626px;"></td></tr><tr role="row" id="485985" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:right;display:none;" title="485985" aria-describedby="gridCronograma_id">485985</td><td role="gridcell" style="text-align:left;" title="12/06/2023" aria-describedby="gridCronograma_dt_aula">12/06/2023</td><td role="gridcell" style="text-align:left;" title="Prática UPD I- m1 parcial" aria-describedby="gridCronograma_topico_abordado">Primeira consulta, anamnese e exame clínico</td></tr><tr role="row" id="485987" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt"><td role="gridcell" style="text-align:right;display:none;" title="485987" aria-describedby="gridCronograma_id">485987</td><td role="gridcell" style="text-align:left;" title="13/06/2023" aria-describedby="gridCronograma_dt_aula">13/06/2023</td><td role="gridcell" style="text-align:left;" title="Prática UPD I- m2 parcial" aria-describedby="gridCronograma_topico_abordado">Endodontia do dente 23</td></tr><tr role="row" id="485988" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:right;display:none;" title="485988" aria-describedby="gridCronograma_id">485988</td><td role="gridcell" style="text-align:left;" title="14/06/2023" aria-describedby="gridCronograma_dt_aula">14/06/2023</td><td role="gridcell" style="text-align:left;" title="Teórica: Introdução à UPD I" aria-describedby="gridCronograma_topico_abordado">Restauração no dente 11</td></tr>
-
-          <div id="gridCronogramaPager" style="margin-bottom: 5px"></div>
-
-                  </tr>
-                  <tr></tr>
-                </thead></table></div>
-              </div>
-            </div>
-          </div>
+  <table class="ui-jqgrid-htable" style="width: 1200px;" role="grid" aria-labelledby="gbox_gridHistoricoAluno" cellspacing="0" cellpadding="0" border="0">
+        <thead>
+      <tr class="ui-jqgrid-labels" role="rowheader">
+        <th id="gridHistoricoAluno_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="ID" style="width: 150px; display: none;" aria-selected="false">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+          <div id="jqgh_gridHistoricoAluno_id" class="ui-jqgrid-sortable">ID<span class="s-ico" style="display: none;"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr ui-state-disabled"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+        </th>
+        <th id="gridHistoricoAluno_cod_atividade" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 151px;">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_cod_atividade" class="ui-jqgrid-sortable">Data<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+        </th>
+        <th id="gridHistoricoAluno_disciplina" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Descrição do exame" style="width: 604px;" aria-selected="true">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_disciplina" class="ui-jqgrid-sortable">Descrição do exame<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+        </th>
+        <th id="gridHistoricoAluno_nota_conceito" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Aluno" style="width: 175px;">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_nota_conceito" class="ui-jqgrid-sortable">Aluno<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+        </th>
+        <th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Responsável" style="width: 175px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div class="ui-jqgrid-sortable">Responsável<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+        </th>
+      </tr>
+    </thead>
+        <thead>
+      <tr role="row" id="4333240" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt">
+        <td role="gridcell" style="text-align:center;display:none;" title="">&nbsp;</td>
+        <td role="gridcell" style="text-align:center;" title="05/06/2023">05/06/2023</td>
+        <td role="gridcell" style="text-align:left;" title="Avaliação endodôntica do dente 15">Primeira consulta - anamnese e exame clínico</td>
+        <td role="gridcell" style="text-align:center;" title="Aluno">Aluno W</td>
+        <td role="gridcell" style="text-align:left;" title="Responsável">Prof. Z</td>
+      </thead>
+      <thead>
+      <tr role="row" id="4333240" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt">
+        <td role="gridcell" style="text-align:center;display:none;" title="">&nbsp;</td>
+        <td role="gridcell" style="text-align:center;">15/06/2023</td>
+        <td role="gridcell" style="text-align:left;">Endodontia do 15</td>
+        <td role="gridcell" style="text-align:center;" title="Aluno">Aluno W</td>
+        <td role="gridcell" style="text-align:left;" title="Responsável">Prof. Z</td>
+      </thead>
+            <thead>
+      <tr role="row" id="4333240" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt">
+        <td role="gridcell" style="text-align:center;display:none;" title="">&nbsp;</td>
+        <td role="gridcell" style="text-align:center;">22/06/2023</td>
+        <td role="gridcell" style="text-align:left;">Alta do paciente</td>
+        <td role="gridcell" style="text-align:center;" title="Aluno">Aluno W</td>
+        <td role="gridcell" style="text-align:left;" title="Responsável">Prof. Z</td>
+      </thead>
+  </table></div>
+          <div style="margin-bottom: 5px"></div>
 
   <br>
 </div>
@@ -1183,63 +1144,35 @@
 <!-- FIM TAB HISTÓRICO ODONTOLÓGICO--> 
 
 
-
-
-
 <!-- INÍCIO TAB EXAMES COMPLEMENTARES --> 
 
 <div id="tab-4" class="ui-widget tab tab-4 tab-4 ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-5" role="tabpanel" aria-expanded="false" aria-hidden="true">
 
-  <input type="hidden" name="pessoa_vacina_id" id="pessoa_vacina_id" value="" />
-  <script>var pessoa_vacina_id = $('#pessoa_vacina_id');</script>
-        <label name="lblVacina" id="lblVacina" style="width: 200px;"  >Selecione o tipo de exame complementar:</label>
-        <select class="mousetrap" style="width: 500px;" name="cmbVacina" id="cmbVacina" ><option value=''>&nbsp;</option>
-  <option value="1">Radiografia periapical</option>
-  <option value="2">Radiografia panorâmica</option>
-  <option value="3">Exame complementar digitalizado</option>
-  <option value="4">Outro</option>
-  </select><script type='text/javascript'>
-              var cmbVacina = 'cmbVacina';
-              $(document).ready(function(){
-                  $('#cmbVacina').selectmenu({style:'dropdown'});
-              });
-          </script>      <br />
-        <label name="lblPrimeiraDose" id="lblPrimeiraDose" style="width: 200px;"  >Data do exame</label>
-        <input type="text" name="dtPrimeiraDose" id="dtPrimeiraDose" value="" maxlength="10" class="ui-state-default ui-corner-all mousetrap  datepicker" style=" width: 80px;" />
-  <script type='text/javascript'>var dtPrimeiraDose = $('#dtPrimeiraDose');</script>      <br />
-              <label name="lblComprovante" id="lblComprovante" style="width: 200px;"  >Anexar o exame:</label>
-        
-  <input type="hidden" name="arquivoId" id="arquivoId" value="" />
-  <script>var arquivoId = $('#arquivoId');</script><input type="text" name="arquivoName" id="arquivoName" value="" maxlength="" class="ui-state-default ui-corner-all mousetrap " readonly="1" style="width: 380px;"  />
-  <script>var arquivoName = $('#arquivoName');</script>
-  <button id="btnarquivo" name="btnarquivo" onclick="openWindow(BASE_URL+'util/upload/choiceFile/arquivoId/arquivoName/finishUploadArquivo/pdf|png|jpg|jpeg', 'Selecione o arquivo que deseja enviar', 600);" style="height: 24px; margin-left:0px; margin-bottom: 5px; margin-right: 5px;" class="ui-button ui-button-text-icon-primary ui-widget ui-state-default ui-corner-all"><span class="ui-button-icon-primary ui-icon ui-icon-newwin" style="float: left;"></span>Fazer upload</button>      <br />    
-        <button name="btnAdicionarVacina" onClick="adicionarVacina()" id="btnAdicionarVacina" value="Adicionar" class="button"  >Adicionar</button>
-        <button name="btnAtualizarVacina" onClick="adicionarVacina()" id="btnAtualizarVacina" value="Alterar" class="button"  >Alterar</button>
-        <button name="btnCancelarVacina" onClick="limparVacina()" id="btnCancelarVacina" value="Cancelar" class="button"  >Cancelar</button>
-        <button name="btnExcluirVacina" onClick="removerVacina()" id="btnExcluirVacina" value="Excluir" class="button"  >Excluir</button>
-        <br />
-        </form>
-        
+<hr class="ui-state-default"><label name="anexarexames" id="anexarexames" style="width:350px; font-size: 16; font-weight: bold;">Exames complementares</label>
+  <br></hr>
 
-
-  <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_gridHistoricoAluno" dir="ltr" style="width: 1707px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_gridHistoricoAluno"></div><div class="loading ui-state-default ui-state-active" id="load_gridHistoricoAluno" style="display: none;">Carregando...</div><div class="ui-jqgrid-view" id="gview_gridHistoricoAluno" style="width: 1707px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div style="width: 1707px;" class="ui-state-default ui-jqgrid-hdiv"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 1707px;" role="grid" aria-labelledby="gbox_gridHistoricoAluno" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="gridHistoricoAluno_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="ID" style="width: 150px; display: none;" aria-selected="false"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_id" class="ui-jqgrid-sortable">ID<span class="s-ico" style="display: none;"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr ui-state-disabled"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_cod_atividade" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 151px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_cod_atividade" class="ui-jqgrid-sortable">Data<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_disciplina" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Descrição do exame" style="width: 604px;" aria-selected="true"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_disciplina" class="ui-jqgrid-sortable">Descrição do exame<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_nota_conceito" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Tipo" style="width: 151px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_nota_conceito" class="ui-jqgrid-sortable">Tipo<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_situacao" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Baixar" style="width: 151px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_situacao" class="ui-jqgrid-sortable">Baixar<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></th></tr></thead>
+  <p></p>
+        
+  <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="examesADDs" dir="ltr" style="width: 1707px;"><div class="ui-widget-overlay jqgrid-overlay" id="dataAnexo"></div><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div style="width: 1707px;" class="ui-state-default ui-jqgrid-hdiv"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 1707px;" role="grid" aria-labelledby="gbox_gridHistoricoAluno" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="gridHistoricoAluno_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="ID" style="width: 150px; display: none;" aria-selected="false"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_id" class="ui-jqgrid-sortable">ID<span class="s-ico" style="display: none;"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr ui-state-disabled"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_cod_atividade" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 151px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_cod_atividade" class="ui-jqgrid-sortable">Data<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_disciplina" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Descrição do exame" style="width: 604px;" aria-selected="true"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_disciplina" class="ui-jqgrid-sortable">Descrição do exame<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_nota_conceito" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Tipo" style="width: 175px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_nota_conceito" class="ui-jqgrid-sortable">Tipo<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_situacao" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Baixar" style="width: 151px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_situacao" class="ui-jqgrid-sortable">Baixar<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></th></tr></thead>
 
   <tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height: 0px; width: 64px;"></td><td role="gridcell" style="height: 0px; width: 255px;"></td><td role="gridcell" style="height: 0px; width: 64px;"></td><td role="gridcell" style="height: 0px; width: 64px;"></td><td role="gridcell" style="height: 0px; width: 32px;"></td><td role="gridcell" style="height: 0px; width: 32px;"></td><td role="gridcell" style="height: 0px; width: 64px;"></td><td role="gridcell" style="height: 0px; width: 64px;"></td><td role="gridcell" style="height: 0px; width: 61px;"></td></tr>
 
-    <tr role="row" id="4436175" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:right;display:none;" title="4436175" aria-describedby="gridHistoricoAluno_id">4436175</td><td role="gridcell" style="text-align:right;display:none;" title="Odontologia" aria-describedby="gridHistoricoAluno_curso">Odontologia</td><td role="gridcell" style="text-align:center;display:none;" title="" aria-describedby="gridHistoricoAluno_nota_final">&nbsp;</td><td role="gridcell" style="text-align:center;display:none;" title="" aria-describedby="gridHistoricoAluno_conceito_final">&nbsp;</td><td role="gridcell" style="text-align:center;display:none;" title="2023/1" aria-describedby="gridHistoricoAluno_ano_periodo">2023/1</td><td role="gridcell" style="text-align:center;display:none;" title="" aria-describedby="gridHistoricoAluno_dispensa">&nbsp;</td>
-    <td role="gridcell" style="text-align:center;" title="03480008" aria-describedby="gridHistoricoAluno_cod_atividade">01/09/2020</td><td role="gridcell" style="text-align:left;" title="UNIDADE DE PRÓTESE DENTÁRIA II" aria-describedby="gridHistoricoAluno_disciplina">Radiografia do dente 11</td><td role="gridcell" style="text-align:center;" title="Radiografia periapical" aria-describedby="gridHistoricoAluno_situacao">Radiografia periapical</td><td><input class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" type="button" value="Plano de ensino" style="margin: 2px 2px 2px 0px;" onclick="imprimirPlanoEnsino(284296)"></td></tr>
+ 
+    <tr role="row" id="4333240" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt"><td role="gridcell" style="text-align:center;display:none;" title="">&nbsp;</td><td role="gridcell" style="text-align:center;">19/04/2018</td><td role="gridcell" style="text-align:left;" title="Avaliação endodôntica do dente 15">Avaliação endodôntica do dente 15</td><td role="gridcell" style="text-align:center;" title="Radiografia periapical">Radiografia periapical</td><td role="gridcell" style="text-align:center;" title=""><input class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" type="button" value="Baixar exame" style="margin: 2px 2px 2px 0px;" onclick="baixarExame()"></td></tr><tr role="row" id="4280175" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr">
 
+    <tr role="row" id="4333240" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt"><td role="gridcell" style="text-align:center;display:none;" title="">&nbsp;</td><td role="gridcell" style="text-align:center;">01/03/2022</td><td role="gridcell" style="text-align:left;" title="Avaliação endodôntica do dente 15">Radiografia para exodontia do 22</td><td role="gridcell" style="text-align:center;" title="Radiografia periapical">Radiografia periapical</td><td role="gridcell" style="text-align:center;" title=""><input class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" type="button" value="Baixar exame" style="margin: 2px 2px 2px 0px;" onclick="baixarExame()"></td></tr><tr role="row" id="4280175" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr">
 
-    <tr role="row" id="4332954" tabindex="0" class="ui-widget-content jqgrow ui-row-ltr ui-state-highlight" aria-selected="true"><td role="gridcell" style="text-align:center;display:none;" title="" aria-describedby="gridHistoricoAluno_dispensa">&nbsp;</td><td role="gridcell" style="text-align:center;" title="10/10/2022" aria-describedby="gridHistoricoAluno_cod_atividade">10/10/2022</td><td role="gridcell" style="text-align:left;" title="Radiografia para avaliação de dente incluso" aria-describedby="gridHistoricoAluno_disciplina">Radiografia para avaliação de dente incluso</td><td role="gridcell" style="text-align:center;" title="Radiografia panorâmica" aria-describedby="gridHistoricoAluno_situacao">Radiografia panorâmica</td><td role="gridcell" style="text-align:center;" title="" aria-describedby="gridHistoricoAluno_plano"><input class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" type="button" value="Plano de ensino" style="margin: 2px 2px 2px 0px;" onclick="imprimirPlanoEnsino(284293)"></td></tr>
+    <tr role="row" id="4333240" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt"><td role="gridcell" style="text-align:center;display:none;" title="">&nbsp;</td><td role="gridcell" style="text-align:center;">05/06/2023</td><td role="gridcell" style="text-align:left;" title="Avaliação endodôntica do dente 15">Planejamento do caso</td><td role="gridcell" style="text-align:center;" title="Radiografia periapical">Radiografia panorâmica</td><td role="gridcell" style="text-align:center;" title=""><input class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" type="button" value="Baixar exame" style="margin: 2px 2px 2px 0px;" onclick="baixarExame()"></td></tr><tr role="row" id="4280175" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr">
 
-    <tr role="row" id="4333240" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-default jqgrow-alt"><td role="gridcell" style="text-align:center;display:none;" title="" aria-describedby="gridHistoricoAluno_dispensa">&nbsp;</td><td role="gridcell" style="text-align:center;" title="05/06/2023" aria-describedby="gridHistoricoAluno_cod_atividade">05/06/2023</td><td role="gridcell" style="text-align:left;" title="Avaliação endodôntica do dente 15" aria-describedby="gridHistoricoAluno_disciplina">Avaliação endodôntica do dente 15</td><td role="gridcell" style="text-align:center;" title="Radiografia periapical" aria-describedby="gridHistoricoAluno_situacao">Radiografia periapical</td><td role="gridcell" style="text-align:center;" title="" aria-describedby="gridHistoricoAluno_plano"><input class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" type="button" value="Plano de ensino" style="margin: 2px 2px 2px 0px;" onclick="imprimirPlanoEnsino(284291)"></td></tr><tr role="row" id="4280175" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:right;display:none;" title="4280175" aria-describedby="gridHistoricoAluno_id">4280175</td><td role="gridcell" style="text-align:right;display:none;" title="Odontologia" aria-describedby="gridHistoricoAluno_curso">Odontologia</td><td role="gridcell" style="text-align:center;display:none;" title="" aria-describedby="gridHistoricoAluno_nota_final">&nbsp;</td><td role="gridcell" style="text-align:center;display:none;" title="" aria-describedby="gridHistoricoAluno_conceito_final">&nbsp;</td><td role="gridcell" style="text-align:center;display:none;" title="2022/2" aria-describedby="gridHistoricoAluno_ano_periodo">2022/2</td><td role="gridcell" style="text-align:center;display:none;" title="" aria-describedby="gridHistoricoAluno_dispensa">&nbsp;</td></thead>
+    </thead>
   </table>
+</div>
+</div>
+</div>
 <!-- FIM TAB EXAMES COMPLEMENTARES --> 
 
+<br>
+ 
 
-
-
-
-<!-- INÍCIO TAB FREQUÊNCIA --> 
-  </body>
+</body>
 </html>
