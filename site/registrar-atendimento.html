@@ -250,24 +250,24 @@
 
 <div id="tab-0" class="ui-widget tab tab-0 tab-0 ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-0" role="tabpanel" aria-expanded="false" aria-hidden="true">
 
-<input type="hidden" name="projetos_coordenadores_id" id="projetos_coordenadores_id" value="" />
-<script>var projetos_coordenadores_id = $('#projetos_coordenadores_id');</script>        
-<input type="hidden" name="projeto_equipe_id" id="projeto_equipe_id" value="" />
-<script>var projeto_equipe_id = $('#projeto_equipe_id');</script>        <label name="lblCoordenador" id="lblCoordenador" style="width: 100px;"  >Paciente</label>
-        <div style="height: 22px; width: 25px; margin: 0px -1px 5px 0px; display: block; float: left; position: relative; padding: 0; text-decoration: none !important; text-align: center; zoom: 1; overflow: visible; border-right: none;" class="ui-widget ui-state-default ui-corner-tl ui-corner-bl ui-button-icon-only"><span class=" ui-icon ui-icon-search"></span></div><input type="text" value="" name="searchcoordenador_funcionario_id" id="searchcoordenador_funcionario_id" maxlength="255" class="ui-state-default ui-corner-tr ui-corner-br mousetrap " style="width: 383px;"  />
-<input type="hidden" name="coordenador_funcionario_id" id="coordenador_funcionario_id" value="" />
-<script>var coordenador_funcionario_id = $('#coordenador_funcionario_id');</script><script type='text/javascript'>
-                var coordenador_funcionario_id = $('#coordenador_funcionario_id');
-                var searchcoordenador_funcionario_id = $('#searchcoordenador_funcionario_id');
-                $('#coordenador_funcionario_id').prop('url', 'https://cobalto.ufpel.edu.br/projetos/coordenacao/projeto/getServidores');
+<input type="hidden" name="pacientes_id" id="pacientes_id" value="" />
+<script>var pacientes_id = $('#pacientes_id');</script>        
+<input type="hidden" name="pacientes_id" id="pacientes_id" value="" />
+<script>var pacientes_id = $('#pacientes_id');</script>        <label name="lblPaciente" id="lblPaciente" style="width: 100px;" >Paciente</label>
+        <div style="height: 22px; width: 25px; margin: 0px -1px 5px 0px; display: block; float: left; position: relative; padding: 0; text-decoration: none !important; text-align: center; zoom: 1; overflow: visible; border-right: none;" class="ui-widget ui-state-default ui-corner-tl ui-corner-bl ui-button-icon-only"><span class=" ui-icon ui-icon-search"></span></div><input type="text" value="" name="searchPaciente_id" id="searchPaciente_id" maxlength="255" class="ui-state-default ui-corner-tr ui-corner-br mousetrap " style="width: 383px;"  />
+<input type="hidden" name="pacientes_id" id="pacientes_id" value="" />
+<script>var pacientes_id = $('#pacientes_id');</script><script type='text/javascript'>
+                var pacientes_id = $('#pacientes_id');
+                var searchPaciente_id = $('#searchPaciente_id');
+                $('#pacientes_id').prop('url', 'https://cobalto.ufpel.edu.br/projetos/coordenacao/projeto/getServidores');
                 $(function() {
-                    $('#searchcoordenador_funcionario_id').autocomplete({
+                    $('#searchPaciente_id').autocomplete({
                         minLength: 3,
                         source: function(request, response) {
-                            $('#coordenador_funcionario_id').val('');
-                            try{coordenador_funcionario_id_find(); } catch(err){}
+                            $('#pacientes_id').val('');
+                            try{pacientes_id_find(); } catch(err){}
                             $.ajax({
-                                url: $('#coordenador_funcionario_id').prop('url'),
+                                url: $('#pacientes_id').prop('url'),
                                 dataType: 'json',
                                 data: {autocomplete: true, q: request.term},
                                 success: function( data ) {
@@ -284,30 +284,65 @@
                             });
                         },
                         select: function(event, ui) {
-                            $('#coordenador_funcionario_id').val(ui.item.valueHidden);
-                            try{ coordenador_funcionario_id_callback(ui.item.valueHidden, ui.item.label); } catch(err){}
+                            $('#pacientes_id').val(ui.item.valueHidden);
+                            try{ pacientes_id_callback(ui.item.valueHidden, ui.item.label); } catch(err){}
                         }
                     });
-                    $('#searchcoordenador_funcionario_id').blur(function(){
-                        if($('#searchcoordenador_funcionario_id').val() == ''){
-                            $('#coordenador_funcionario_id').val('');
+                    $('#searchPaciente_id').blur(function(){
+                        if($('#searchPaciente_id').val() == ''){
+                            $('#pacientes_id').val('');
                         }
-                        if($('#coordenador_funcionario_id').val() == ''){
-                            $('#searchcoordenador_funcionario_id').val('');
+                        if($('#pacientes_id').val() == ''){
+                            $('#pacientes_id').val('');
                         }
-                        try{ coordenador_funcionario_id_blur(); } catch(err){}
+                        try{ pacientes_id_blur(); } catch(err){}
                     });
                 });
             </script>
                 
         <br />
 
-<div>
-  <hr class="ui-state-default"><label name="registrar-atendimento" id="registrar-atendimento" style="width:180px; font-size: 16; font-weight: bold;">Registrar atendimento:</label>
+
+ <div>
+  <hr class="ui-state-default">
+  <label name="registrar-atendimento" id="registrar-atendimento" style="width:180px; font-size: 16; font-weight: bold;">Registrar atendimento:</label>
   <br></hr></div>
 
 
-  <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_gridCronograma" dir="ltr" style="width: 1200px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_gridCronograma"></div><div class="loading ui-state-default ui-state-active" id="load_gridCronograma" style="display: none;">Carregando...</div><div class="ui-jqgrid-view" id="gview_gridCronograma" style="width: 1200px;">
+    <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function toggleDivVisibility() {
+      var yesRadio = document.getElementById("yesRadio");
+      var div = document.getElementById("odontogramaDiv");
+      
+      if (yesRadio.checked) {
+        div.style.display = "block";
+      } else {
+        div.style.display = "none";
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", function() {
+      var noRadio = document.getElementById("noRadio");
+      noRadio.checked = true;
+      toggleDivVisibility();
+    });
+  </script>
+</head>
+<body>
+  <p> Foi alterado o odontograma?</p>
+  <label for="yesRadio">Sim</label>
+  <input type="radio" id="yesRadio" name="myRadio" value="Yes" onchange="toggleDivVisibility()">
+  
+  <label for="noRadio">Não</label>
+  <input type="radio" id="noRadio" name="myRadio" value="No" onchange="toggleDivVisibility()" checked><br>
+  
+    <div id="odontogramaDiv" class="hidden">
+    <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_gridCronograma" dir="ltr" style="width: 1200px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_gridCronograma"></div><div class="loading ui-state-default ui-state-active" id="load_gridCronograma" style="display: none;">Carregando...</div><div class="ui-jqgrid-view" id="gview_gridCronograma" style="width: 1200px;">
     <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title">Odontograma</span></div><div style="width: 1200px" class="ui-state-default ui-jqgrid-hdiv"><div class="ui-jqgrid-hbox"></div>
 
       <table class="ui-jqgrid-htable" style="width: 1200px;" role="grid" aria-labelledby="gbox_gridCronograma" cellspacing="0" cellpadding="0" border="0">
@@ -666,11 +701,19 @@
     </tr>
 
   </table></div></div>
+  </div>
   <p></p>
   <br>
+
+<hr class="ui-state-default">
+
+  <br></hr>
+
 </div>
-    <p></p>
-    
+
+  <p></p>
+  <p></p>  
+
     <label name="lbldataAtendimento" id="lbldataAtendimento" style="width: 200px;">Data do atendimento</label>
     <input type="text" name="dataAtendimento" id="dataAtendimento" value="" maxlength="10" class="ui-state-default ui-corner-all mousetrap  datepicker" style=" width: 80px;" />
   	<script type='text/javascript'>var dataAtendimento = $('#dataAtendimento');</script>
@@ -681,12 +724,89 @@
     <input type="checkbox" name="faltaPaciente" id="faltaPaciente" style=" width: 80px;" />
     <br>
 
+    <p></p>  
 
-  	          <hr class="ui-state-default"><label name="registrar-atendimento" id="registrar-atendimento" style="width:200px;">Descrição do procedimento realizado:</label>
+      <input type="hidden" name="codSUS_id" id="codSUS_id" value="" />
+<script>var codSUS_id = $('#codSUS_id');</script>        
+<input type="hidden" name="codSUS_id" id="codSUS_id" value="" />
+<script>var codSUS_id = $('#codSUS_id');</script>        <label name="lblcodSUS" id="lblcodSUS" style="width: 100px;" >Código SUS</label>
+        <div style="height: 22px; width: 25px; margin: 0px -1px 5px 0px; display: block; float: left; position: relative; padding: 0; text-decoration: none !important; text-align: center; zoom: 1; overflow: visible; border-right: none;" class="ui-widget ui-state-default ui-corner-tl ui-corner-bl ui-button-icon-only"><span class=" ui-icon ui-icon-search"></span></div><input type="text" value="" name="searchcodSUS_id" id="searchcodSUS_id" maxlength="255" class="ui-state-default ui-corner-tr ui-corner-br mousetrap " style="width: 383px;"  />
+<input type="hidden" name="codSUS_id" id="codSUS_id" value="" />
+<script>var codSUS_id = $('#codSUS_id');</script><script type='text/javascript'>
+                var codSUS_id = $('#codSUS_id');
+                var searchcodSUS_id = $('#searchcodSUS_id');
+                $('#codSUS_id').prop('url', 'https://cobalto.ufpel.edu.br/projetos/coordenacao/projeto/getServidores');
+                $(function() {
+                    $('#searchcodSUS_id').autocomplete({
+                        minLength: 3,
+                        source: function(request, response) {
+                            $('#codSUS_id').val('');
+                            try{codSUS_id_find(); } catch(err){}
+                            $.ajax({
+                                url: $('#codSUS_id').prop('url'),
+                                dataType: 'json',
+                                data: {autocomplete: true, q: request.term},
+                                success: function( data ) {
+                                    if(data.combo.length>0){
+                                        response($.map(data.combo, function( item ) {
+                                            return {label: item.optionName, value: item.optionName, valueHidden: item.value}
+                                        }));
+                                    } else {
+                                        response({
+                                            label: 'Nenhum resultado encontrado!'
+                                        });
+                                    }
+                                }
+                            });
+                        },
+                        select: function(event, ui) {
+                            $('#codSUS_id').val(ui.item.valueHidden);
+                            try{ codSUS_id_callback(ui.item.valueHidden, ui.item.label); } catch(err){}
+                        }
+                    });
+                    $('#searchcodSUS_id').blur(function(){
+                        if($('#searchcodSUS_id').val() == ''){
+                            $('#codSUS_id').val('');
+                        }
+                        if($('#codSUS_id').val() == ''){
+                            $('#codSUS_id').val('');
+                        }
+                        try{ codSUS_id_blur(); } catch(err){}
+                    });
+                });
+            </script>
+                
+    <br>
 
-            <textarea style="width: 750px;" name="topico_abordado" id="topico_abordado" rows="10" maxlength="1000000" class="ui-state-default ui-corner-all"></textarea>
-              <script>var topico_abordado = $('#topico_abordado');</script>
+<form id="formcodSUS" action="https://cobalto.ufpel.edu.br/projetos/bolsas/controleDeBolsas/salvarAtividade" method="post">
+  <script language="JavaScript"> function formcodSUS_submit() {     btnSalvarTemp = document.getElementById('salvar');    if(btnSalvarTemp){      btnSalvarTemp.disabled = true;      btnSalvarTemp.setAttribute('aria-disabled', true);      btnSalvarTemp.classList.add('ui-state-disabled');    }    _.each(document.getElementsByClassName('btn_bloqueio'), (element) => {          element.disabled = true;          element.setAttribute('aria-disabled', true);          element.classList.add('ui-state-disabled');    });    $('#formcodSUS').ajaxSubmit({     dataType:'json',     clearForm: false,     beforeSubmit: formcodSUS_beforeSubmit,    success:  formcodSUS_sucesfull,     complete:  formcodSUS_complete     }); } function formcodSUS_confirmaSenha() {     var action = $('#formcodSUS').attr('action');    var dados = $('#formcodSUS').serialize();    openWindow(action+'/?'+dados, 'Confirmação de senha', 400); }function formcodSUS_sucesfull(data) {    try{ formcodSUS_callback(data); } catch(err){}}function formcodSUS_complete(data) {    btnSalvarTemp = document.getElementById('salvar');    if(btnSalvarTemp){      document.getElementById('salvar').disabled = false;      document.getElementById('salvar').setAttribute('aria-disabled', false);      document.getElementById('salvar').classList.remove('ui-state-disabled');    }    _.each(document.getElementsByClassName('btn_bloqueio'), (element) => {          element.disabled = false;          element.setAttribute('aria-disabled', false);          element.classList.remove('ui-state-disabled');    });    btnCarregandoTemp = document.getElementById('carregando');    if(btnCarregandoTemp){      document.getElementById('carregando').style.display = 'none';    }}function formcodSUS_beforeSubmit(formData, jqForm, options) { return beforeSubmit(formData, jqForm, options, 'formcodSUS');}</script>            
+    <input type="hidden" name="txtcodSUS" id="txtcodSUS" value="12704" />
+
+    <script type='text/javascript'>var txtRegistroSUS = $('#txtRegistroSUS');</script>
+            <br>
+            <button name="btnAdicionar" onClick="Adicionar()" id="btnAdicionar" value="Adicionar" class="button"  >Adicionar</button>
+            <button name="btnExcluir" onClick="Excluir()" id="btnExcluir" value="Excluir" class="button"  >Excluir</button>
+            <br>
+            </form>
+
+            <br>
+     <table id="gridSUS"></table>
+      <div id="gridSUSPager" style="margin-bottom: 5px"></div>                                                        <script>var gridSUS =  'gridSUS';$(document).ready(function (){$('#gridSUS').jqGrid({"pager":"#gridSUS", "sortorder":"asc","rowNum":20,"multiselect":true,"autoload":true,"height":"auto","jsonReader":{"repeatitems":false,"id":0},"onSelectRow":function(rowid){try{gridSUS_onSelectRow(rowid);}catch(err){}},"onCellSelect":function(rowid, iRow, iCol, e){if(iRow != 0){$("#gridSUS").resetSelection();try{gridAtividades_click(rowid);}catch(err){}}},"ondblClickRow":function(rowid, iRow, iCol, e){if(iRow != 0){$("#gridSUS").resetSelection();try{gridAtividades_dblClick(rowid);}catch(err){}}},"loadBeforeSend":function(xhr){try{gridAtividades_loadBeforeSend();}catch(err){}},"loadComplete":function(data){if($("#gridSUS").jqGrid('getGridParam','datatype') != 'local'){try{gridAtividades_loadComplete();}catch(err){}}},"gridComplete":function(data){generateTabs();try{gridAtividades_init();}catch(err){}},"loadError":function(xhr,st,err) {var url = $("#gridSUS").jqGrid('getGridParam','url');if(!$.cookie('logout'))if(xhr.status==200 && st=="parsererror"){try{console.log("Grid: gridSUS; URL: "+url+"; Type: "+st+"; Response: O resultado não está no formato esperado");}catch(err){}}else{try{console.log("Grid: gridSUS; URL: "+url+"; Type: "+st+"; Response: "+ xhr.status + " "+xhr.statusText);}catch(err){}}},"url":"https://cobalto.ufpel.edu.br/projetos/bolsas/controleDeBolsas/listarAtividades/12704","altRows":true,"altclass":"ui-state-default jqgrow-alt","autowidth":true,"rownumbers":false,"viewrecords":true,"datatype":"json","forceFit":true,"headertitles":true,"colNames":["ID","Cód.","Descrição do procedimento"],"colModel":[{"hidden":true,"name":"id","index":"id","colName":"ID","width":0,"align":"center"},{"name":"codSUS_id","index":"Cód.","colName":"Cód.","width":10,"align":"left"},{"name":"atividade","index":"atividade","colName":"Descrição do procedimento","width":100,"align":"left"}]});$('#gridSUS').setGridParam({datatype: 'json'});$('#gridSUS').setGridParam({autoload: true});});function gridAtividades_resize() {$('#gbox_gridAtividades').width('auto');$('#gridSUS').setGridWidth($('#gbox_gridAtividades').width());};$(window).bind('resize', gridAtividades_resize);$('#tab').bind('tabsshow', gridAtividades_resize);</script>
+    
+    <p></p>  
+    <p></p>  
+    <p></p>  
+
+    <hr class="ui-state-default"><label name="registrar-atendimento" id="registrar-atendimento" style="width:200px;">Descrição do procedimento realizado:</label>
+
+    <p></p>  
+
+      <textarea style="width: 750px;" name="topico_abordado" id="topico_abordado" rows="10" maxlength="1000000" class="ui-state-default ui-corner-all"></textarea>
+        <script>var topico_abordado = $('#topico_abordado');</script>
           <br>
+              
+                <hr class="ui-state-default">
+
               <label name="lblresponsavel" id="lblresponsavel" style="width: 120px;">Responsável técnico</label>
                 <select class="mousetrap" style="width: 100px; display: none;" name="cmbresponsavel" id="cmbresponsavel" aria-disabled="false"><option value="">&nbsp;</option>
                   <option value="2">Prof. A</option>
@@ -756,7 +876,8 @@
 
         <p></p>
         
-
+  <hr class="ui-state-default">
+  <p></p>
 
   <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="examesADDs" dir="ltr" style="width: 1707px;"><div class="ui-widget-overlay jqgrid-overlay" id="dataAnexo"></div><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div style="width: 1707px;" class="ui-state-default ui-jqgrid-hdiv"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 1707px;" role="grid" aria-labelledby="gbox_gridHistoricoAluno" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="gridHistoricoAluno_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="ID" style="width: 150px; display: none;" aria-selected="false"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_id" class="ui-jqgrid-sortable">ID<span class="s-ico" style="display: none;"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr ui-state-disabled"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_cod_atividade" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 151px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_cod_atividade" class="ui-jqgrid-sortable">Data<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_disciplina" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Descrição do exame" style="width: 604px;" aria-selected="true"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_disciplina" class="ui-jqgrid-sortable">Descrição do exame<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_nota_conceito" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Tipo" style="width: 175px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_nota_conceito" class="ui-jqgrid-sortable">Tipo<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridHistoricoAluno_situacao" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Baixar" style="width: 151px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_situacao" class="ui-jqgrid-sortable">Baixar<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></th></tr></thead>
 
