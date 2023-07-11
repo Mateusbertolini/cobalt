@@ -1,0 +1,161 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head lang="pt-br">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+      <script type="text/javascript" async="" defer="" src="https://stats.ufpel.edu.br/piwik.js"></script><script type="text/javascript">
+    var BASE_URL = 'https://cobalto.ufpel.edu.br/';
+    var WIKI = 'http://wikicobalto.ufpel.edu.br/doku.php?';
+    var PATH_COOKIE = '/';
+    var IMG = 'https://cobalto.ufpel.edu.br/static/_img';
+    var JS = 'https://cobalto.ufpel.edu.br/static/_js';
+</script>
+<link rel="shortcut icon" href="https://cobalto.ufpel.edu.br/static/_img/favicon.ico" type="image/ico">
+<link href="https://cobalto.ufpel.edu.br/static/_css/redmond/all.css.jquery-ui.05032023162651344283.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="https://cobalto.ufpel.edu.br/static/_js/all.javascript.05032023162651344283.js"></script>
+
+<!-- STYLE PÁGINA/TELA PRINCIPAL COBALTO -->
+<div id="content-center" class="ui-layout-center ui-widget-content" style="background: none !important; overflow: hidden !important">
+    <style type="text/css">
+    .columnGeral {width: 100.0%; float: left; padding-bottom: 8px;}
+    .columnGrafico {width: 33.3%; float: left; padding-bottom: 8px;}
+    .columnGrafico1 .portlet, .columnGrafico2 .portlet, .columnGrafico3 .portlet {margin-right: 1.5em;}
+    .column {width: 33.3%; float: left; padding-bottom: 100px;}
+    .column1 .portlet, .column2 .portlet {margin-right: 1.5em;}
+            @media (max-width: 900px){
+            .columnGrafico {width: 100%; float: none; padding-bottom: 0px;}
+            .columnGrafico1 .portlet, .columnGrafico2 .portlet {margin-right: 0px;}
+            .column {width: 100%; float: none; padding-bottom: 0px;}
+            .column1 .portlet, .column2 .portlet {margin-right: 0px;}
+        }
+        .column-fixed {width: 33.3%; float: left; padding-bottom: 100px;}
+    .portlet {margin: 0 0 1.5em 0;}
+    .portlet-header {margin: 0.3em; padding: 2px 3px 5px 5px; cursor:pointer;}
+    .portlet-header button {float: right; height: 18px; width: 18px;}
+    .portlet-header .ui-icon {float: right;}
+    .portlet-content {padding: 6px; background: none !important; border: none; font-size: 1.1em;}
+    .portlet-content a:hover{text-decoration: underline!important;}
+    .portlet-content a:visited{color: #bbb!important;}
+    .portlet-content ul {list-style-type: none !important; padding:0px!important; border: none!important;}
+    .portlet-content ul li {padding: 3px !important; border-right: none!important; border-left: none!important; border-top: none!important; color: inherit!important; font-weight:inherit!important;}
+    .portlet-content ul li:last-child {border-bottom: none!important;}
+    .ui-sortable-placeholder {border: 1px dotted black; visibility: visible !important; height: 50px !important;}
+    .ui-sortable-placeholder * {visibility: hidden;}
+  </style>
+<!-- STYLE PÁGINA/TELA PRINCIPAL COBALTO -->
+
+
+
+<!-- CONTEÚDO DA PÁGINA/TELA DO COBALTO COMEÇA AQUI -->
+<div id="content-center" class="ui-layout-center ui-widget-content"
+    style="background: none !important; overflow: hidden !important">
+    
+  <div class="breadCrumb module">
+    <ul>
+      <li><a href="https://cobalto.ufpel.edu.br/dashboard"></a></li><li>Gestão Saúde</li>
+      <li>Aluno</li>
+      <li>Cadastros</li>
+      <li>Agendar atendimento</li>
+    </ul>
+    <div style="clear: both;"></div></div><div style="clear: both;"></div>
+    
+    <div class="ui-widget-content ui-corner-all toolbar">
+      <button id="voltar-pagina" class="voltar-pagina" style="float: left;">Voltar página</button>
+      <button id="pesquisar" class="pesquisar" title="Enter" style="float: left;">Pesquisar</button>
+      <button id="ajuda" class="ajuda" title="F1" style="float: right;">Ajuda</button>
+      <span style="clear: both; display: block"></span>
+    </div>
+
+<!-- SCRIPT PARA BUSCA - PESQUISA ALTERAR/REFAZER -->
+<script>var tabFiltroCurso = 'tabFiltroCurso';</script>
+  <div id="tabFiltroCurso" class="tabs">
+    <div id="tabFiltroCurso-0" class="ui-widget tabFiltroCurso tabFiltroCurso-0 tabFiltroCurso-0">
+      <ul>
+        <li class="labeltabFiltroCurso"><a href="#tabFiltroCurso-0" accessKey="tabFiltroCurso-0">Filtro</a></li>
+      </ul>
+  <br>
+  <br>
+  <label name="lblCodMatricula" id="lblCodMatricula" style="width: 80px;"  >Prontuário</label>
+  <input type="text" name="txtCodMatricula" id="txtCodMatricula" value="" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 60px;"  />
+
+<script>var txtCodMatricula = $('#txtCodMatricula');</script>
+  <br>
+  <label name="lblCpf" id="lblCpf" style="width: 80px;"  >CPF</label>
+  <input type="text" name="txtCpf" id="txtCpf" value="" maxlength="255" class="ui-state-default ui-corner-all mousetrap cpf" style="width: 100px;"  />
+
+<script>var txtCpf = $('#txtCpf');</script>
+  <br>
+  <label name="lblNome" id="lblNome" style="width: 80px;"  >Nome</label>
+  <input type="text" name="txtNome" id="txtNome" value="" maxlength="255" class="ui-state-default ui-corner-all mousetrap " style="width: 350px;"  />
+
+<script>var txtNome = $('#txtNome');</script>
+    <br>
+    <label name="lblCurso" id="lblCurso" style="width: 80px;"  >Serviço (clínica ou estágio)</label>
+            
+<input type="hidden" name="txtCursoId" id="txtCursoId" value="" />
+<script>var txtCursoId = $('#txtCursoId');</script><input type="text" name="txtCursoCodigo" id="txtCursoCodigo" value="" maxlength="" class="ui-state-default ui-corner-all mousetrap " style="text-align: right;width: 100px;" onblur="openInputTextHit('https://cobalto.ufpel.edu.br/academico/cadastros/buttonHits/buscarCurso/returnButtonHitCurso', returnButtonHitCurso, 'txtCursoId', 'txtCursoCodigo', 'txtCursoDescricao');"  />
+<script>var txtCursoCodigo = $('#txtCursoCodigo');</script>
+<button id="cursoButton" onclick="openButtonHit('https://cobalto.ufpel.edu.br/academico/cadastros/buttonHits/buscarCurso/parent.returnButtonHitCurso', 'Selecione o curso', 900);" style="margin: 0px 1px 0px -4px; height: 24px; display: block; float: left;" class="button-hit">Pesquisar</button><input type="text" name="txtCursoDescricao" id="txtCursoDescricao" value="" maxlength="" class="ui-state-default ui-corner-all mousetrap " style="text-align: left;width: 400px;" readonly="readonly" tabindex="-1"  />
+<script>var txtCursoDescricao = $('#txtCursoDescricao');</script>
+<script>
+            var txtCursoId = $('#txtCursoId');
+            var txtCursoCodigo = $('#txtCursoCodigo');
+        var txtCursoDescricao = $('#txtCursoDescricao');
+        var cursoButton = $('#cursoButton');
+        </script>            <br />            <label name="lblVinculo" id="lblVinculo" for="chkVinculo" style="width: 80px;"  >Somente com vínculo</label>
+            <input type="checkbox" name="chkVinculo" id="chkVinculo" value="" class="mousetrap " checked="checked"  /><label for='chkVinculo' style="width: auto;"  ></label>
+
+<script type="text/javascript">var chkVinculo = $.extend($("#chkVinculo"), {
+                val:() => {
+                        return $("#chkVinculo").is(':checked');
+                    }
+                });
+            var chkVinculo = chkVinculo</script>
+        <br /></div>    </div>
+    
+
+<table class="ui-jqgrid-htable" style="width: 1200px;" role="grid" aria-labelledby="gbox_gridHistoricoAluno" cellspacing="0" cellpadding="0" border="0">
+        <thead>
+      <tr class="ui-jqgrid-labels" role="rowheader">
+        <th id="gridHistoricoAluno_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="ID" style="width: 150px; display: none;" aria-selected="false">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+          <div id="jqgh_gridHistoricoAluno_id" class="ui-jqgrid-sortable">ID<span class="s-ico" style="display: none;"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr ui-state-disabled"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+        </th>
+        <th id="gridHistoricoAluno_cod_atividade" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Data" style="width: 151px;">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_cod_atividade" class="ui-jqgrid-sortable">CPF<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+        </th>
+        <th id="gridHistoricoAluno_disciplina" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Descrição do exame" style="width: 175px;" aria-selected="true">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_disciplina" class="ui-jqgrid-sortable">Nome<span class="s-ico" style=""></span></div>
+        </th>
+        <th id="gridHistoricoAluno_nota_conceito" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Espe" style="width: 175px;">
+          <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_gridHistoricoAluno_nota_conceito" class="ui-jqgrid-sortable">Serviço<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+        </th>
+        <th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" title="Responsável" style="width: 175px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div class="ui-jqgrid-sortable">Situação<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+        
+      </tr>
+    <thead><tr style="align-items: center;">
+      <td role="gridcell" style="text-align:center;" title="05/06/2023">000.000.00-00</td>
+      <td role="gridcell" style="text-align:center;" title="05/06/2023">Paciente B</td>
+      <td role="gridcell" style="text-align:center;" title="05/06/2023">Disciplina A</td>
+      <td role="gridcell" style="text-align:center;" title="05/06/2023">Agendado</td>
+      </tr>
+    <tr style="align-items: center;">
+    <td role="gridcell" style="text-align:center;" title="05/06/2023">000.000.00-00</td>
+    <td role="gridcell" style="text-align:center;" title="05/06/2023">Paciente A</td>
+    <td role="gridcell" style="text-align:center;" title="05/06/2023">Estágio X</td>
+    <td role="gridcell" style="text-align:center;" title="05/06/2023">Não-agendado</td>
+        </tr></thead>
+
+    </table>
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+    <h style="align-content: center;"><a style="font-size: 18px" href="21 - agendar-atendimento.html">PROCURA OU SELECIONA PACIENTE E AVANÇA PARA PARA O AGENDAMENTO</a></h>
+
+    <p></p>
+
+  </body>
+</html>
